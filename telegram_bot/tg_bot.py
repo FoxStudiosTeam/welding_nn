@@ -5,8 +5,8 @@ from ultralytics import YOLO
 import cv2
 import numpy as np
 
-from token import token
-bot = telebot.TeleBot(token)
+import telegram_token
+bot = telebot.TeleBot(telegram_token.TOKEN)
 
 PATH = "../weights.pt"
 model = YOLO(PATH)
