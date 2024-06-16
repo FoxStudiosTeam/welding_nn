@@ -3,21 +3,11 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import numpy as np
 
-PATH_ROOTS = "C:\\Users\\kaiv\\Desktop"
+PATH_ROOTS = "../runs"
 PATHS = [
-    "000_0",
-    "000_1",
-    "pavel",
     "release",
     "release_v2",
     "release_v3",
-    "000_1280",
-    "000_1120",
-    "000_960",
-    "000_800",
-    "000_640",
-    "000_480",
-    "000_320",
 ]
 FILE = "results.csv"
 COLORS = [
@@ -69,7 +59,7 @@ for i in range(len(PATHS)):
     file_path = f"{PATH_ROOTS}/{PATHS[i]}/{FILE}"
     labels, data = read_csv(file_path)
     for plot_id in range(0, 10):
-        axs[floor(plot_id/5)][plot_id%5].plot(data[:, 0], data[:, plot_id+1], label=PATHS[i].replace("000_", ""), color=COLORS[i])
+        axs[floor(plot_id/5)][plot_id%5].plot(data[:, 0], data[:, plot_id+1], label=PATHS[i], color=COLORS[i])
         axs[floor(plot_id/5)][plot_id%5].legend()
         axs[floor(plot_id/5)][plot_id%5].set_title(labels[plot_id+1])
 
