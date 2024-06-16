@@ -1,0 +1,6 @@
+path: ../
+train: train
+val: evaluate
+
+nc: 5
+names: [ 'adj', 'int', 'geo', 'pro', 'non' ]

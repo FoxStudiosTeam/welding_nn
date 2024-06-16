@@ -11,7 +11,7 @@ TEXT_FACE = cv2.FONT_HERSHEY_SIMPLEX
 
 TARGET_DIM = 800
 SRC_DIR = "datasets/evaluate"
-MODEL_SAVE = "runs/detect/train/weights/best.pt"
+MODEL_SAVE = "weights.pt"
 
 model = YOLO(MODEL_SAVE)
 
